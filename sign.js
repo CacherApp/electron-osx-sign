@@ -144,7 +144,8 @@ function signApplicationAsync (opts) {
 
       var args = [
         '--sign', opts.identity.hash || opts.identity.name,
-        '--force'
+        '--force',
+        '--options', 'runtime'
       ]
       if (opts.keychain) {
         args.push('--keychain', opts.keychain)
